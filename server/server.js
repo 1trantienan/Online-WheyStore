@@ -11,7 +11,7 @@ const config = require('../config/config');
 const webpackConfig = require('../webpack.config');
 
 const isDev = process.env.NODE_ENV !== 'production';
-const port  = process.env.PORT || 4000;
+const port  = process.env.PORT || 5000;
 const path = require('path');
 
 
@@ -61,7 +61,7 @@ if (isDev) {
   });
 }
 
-app.listen(port, '172.31.83.99', (err) => {
+app.listen(port, '0.0.0.0', (err) => {
   if (err) {
     console.log(err);
   }

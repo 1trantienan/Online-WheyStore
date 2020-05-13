@@ -102,9 +102,6 @@ router.post("/getProducts", (req, res) => {
 
 });
 
-
-//?id=${productId}&type=single
-//id=12121212,121212,1212121   type=array 
 router.get("/products_by_id", (req, res) => {
     let type = req.query.type
     let productIds = req.query.id
@@ -122,7 +119,6 @@ router.get("/products_by_id", (req, res) => {
     console.log("productIds", productIds)
 
 
-    //we need to find the product information that belong to product Id 
     Product.find({ '_id': { $in: productIds } })
         .populate('writer')
         .exec((err, product) => {
