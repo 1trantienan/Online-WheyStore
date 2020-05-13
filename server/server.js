@@ -11,7 +11,7 @@ const config = require('../config/config');
 const webpackConfig = require('../webpack.config');
 
 const isDev = process.env.NODE_ENV !== 'production';
-const port  = process.env.PORT || 5000;
+const port  = process.env.PORT || 4000;
 const path = require('path');
 
 
@@ -25,6 +25,8 @@ mongoose.Promise = global.Promise;
 const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());~
+app.use(express.static(path.join(__dirname, 'client/build')))
+
 
 // API routes
 require('./routes')(app);
