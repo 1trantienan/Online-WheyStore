@@ -18,7 +18,7 @@
   "license": "ISC",
   "dependencies": {
     "async": "^3.2.0",
-    "aws-sdk": "^2.675.0",
+    "aws-sdk": "^2.814.0",
     "bcrypt": "^3.0.8",
     "body-parser": "^1.18.3",
     "busboy": "^0.3.1",
